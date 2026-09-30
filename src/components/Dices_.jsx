@@ -3,7 +3,6 @@ import React from 'react'
 import { useState } from 'react'
 import { FaDiceFive, FaDiceFour, FaDiceOne, FaDiceSix, FaDiceThree, FaDiceTwo } from 'react-icons/fa'
 import { generateRandNr } from '../utils'
-import { RandomQuote } from './RandomQuote'
 
 export const Dices = () => {
     const [nr, setnr] = useState(1)
@@ -22,7 +21,7 @@ export const Dices = () => {
       <h2>Dice roller</h2>
       <div>{diceComponents[nr]}</div>
       <Button onClick={()=>setnr(generateRandNr(1,6))}>roll dice</Button>
-      <RandomQuote nr={nr}/>
+      {/*<RandomQuote /> */}
     </div>
   )
 }
